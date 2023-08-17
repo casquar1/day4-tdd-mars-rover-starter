@@ -1,5 +1,8 @@
 package com.afs.tdd;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class MarsRover {
 
     private Location location;
@@ -16,6 +19,10 @@ public class MarsRover {
         } else if (givenCommand == Command.TURN_RIGHT) {
            executeCommandRight(location.getDirection());
         }
+    }
+
+    public void executeBatchCommand(List<Command> givenCommands) {
+        givenCommands.forEach(this::executeCommand);
     }
 
     public void executeCommandMove(Direction direction) {
