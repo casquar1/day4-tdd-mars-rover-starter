@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 public class MarsRover {
 
-    private Location location;
+    private final Location location;
 
     public MarsRover(Location location) {
         this.location = location;
