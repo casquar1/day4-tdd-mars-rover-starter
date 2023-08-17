@@ -13,6 +13,10 @@ public class MarsRover {
             if(location.getDirection() == Direction.NORTH){
                 location.setY(location.getY() + 1);
             }
+        } else if (givenCommand == Command.TURN_LEFT) {
+            if (location.getDirection() == Direction.NORTH) {
+                location.setDirection(Direction.WEST);
+            } 
         }
     }
 
