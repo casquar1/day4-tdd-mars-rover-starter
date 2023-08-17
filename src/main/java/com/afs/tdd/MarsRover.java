@@ -12,12 +12,16 @@ public class MarsRover {
     }
 
     public void executeCommand(Command givenCommand) {
-        if(givenCommand == Command.MOVE) {
-            executeCommandMove(location.getDirection());
-        } else if (givenCommand == Command.TURN_LEFT) {
-            executeCommandLeft(location.getDirection());
-        } else if (givenCommand == Command.TURN_RIGHT) {
-           executeCommandRight(location.getDirection());
+        switch (givenCommand) {
+            case MOVE:
+                executeCommandMove(location.getDirection());
+                break;
+            case TURN_LEFT:
+                executeCommandLeft(location.getDirection());
+                break;
+            case TURN_RIGHT:
+                executeCommandRight(location.getDirection());
+                break;
         }
     }
 
