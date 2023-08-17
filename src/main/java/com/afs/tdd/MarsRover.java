@@ -10,15 +10,7 @@ public class MarsRover {
 
     public void executeCommand(Command givenCommand) {
         if(givenCommand == Command.MOVE) {
-            if(location.getDirection() == Direction.NORTH){
-                location.setY(location.getY() + 1);
-            } else if (location.getDirection() == Direction.SOUTH) {
-                location.setY(location.getY() - 1);
-            } else if (location.getDirection() == Direction.EAST) {
-                location.setX(location.getX() + 1);
-            } else if (location.getDirection() == Direction.WEST) {
-                location.setX(location.getX() - 1);
-            }
+            executeCommandMove(location.getDirection());
         } else if (givenCommand == Command.TURN_LEFT) {
             if (location.getDirection() == Direction.NORTH) {
                 location.setDirection(Direction.WEST);
@@ -39,6 +31,18 @@ public class MarsRover {
             } else if (location.getDirection() == Direction.WEST) {
                 location.setDirection(Direction.NORTH);
             }
+        }
+    }
+
+    public void executeCommandMove(Direction direction) {
+        if(direction == Direction.NORTH){
+            location.setY(location.getY() + 1);
+        } else if (direction == Direction.SOUTH) {
+            location.setY(location.getY() - 1);
+        } else if (direction == Direction.EAST) {
+            location.setX(location.getX() + 1);
+        } else if (direction == Direction.WEST) {
+            location.setX(location.getX() - 1);
         }
     }
 
