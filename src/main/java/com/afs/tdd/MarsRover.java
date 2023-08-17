@@ -30,14 +30,19 @@ public class MarsRover {
     }
 
     public void executeCommandMove(Direction direction) {
-        if(direction == Direction.NORTH){
-            location.setY(location.getY() + 1);
-        } else if (direction == Direction.SOUTH) {
-            location.setY(location.getY() - 1);
-        } else if (direction == Direction.EAST) {
-            location.setX(location.getX() + 1);
-        } else if (direction == Direction.WEST) {
-            location.setX(location.getX() - 1);
+        switch (direction) {
+            case NORTH:
+                location.setY(location.getY() + 1);
+                break;
+            case SOUTH:
+                location.setY(location.getY() - 1);
+                break;
+            case EAST:
+                location.setX(location.getX() + 1);
+                break;
+            case WEST:
+                location.setX(location.getX() - 1);
+                break;
         }
     }
 
