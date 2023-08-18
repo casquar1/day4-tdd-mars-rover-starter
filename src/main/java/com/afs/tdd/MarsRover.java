@@ -24,7 +24,7 @@ public class MarsRover {
         }
     }
 
-    public void executeBatchCommand(List<Command> givenCommands) {
+    public void executeBatchCommands(List<Command> givenCommands) {
         givenCommands.forEach(this::executeCommand);
     }
 

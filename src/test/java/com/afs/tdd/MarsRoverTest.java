@@ -195,7 +195,7 @@ class MarsRoverTest {
         List<Command> givenCommands = Arrays.asList(Command.MOVE, Command.TURN_LEFT, Command.MOVE, Command.TURN_RIGHT);
         MarsRover marsRover = new MarsRover(initialLocation);
         // When
-        marsRover.executeBatchCommand(givenCommands);
+        marsRover.executeBatchCommands(givenCommands);
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(-1 , currentLocation.getX());
