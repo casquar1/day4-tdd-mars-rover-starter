@@ -1,6 +1,16 @@
 package com.afs.tdd;
 
 public class Location {
+    private int x;
+    private int y;
+    private Direction direction;
+
+    public Location(int x, int y, Direction direction) {
+        this.x = x;
+        this.y = y;
+        this.direction = direction;
+    }
+
     public int getX() {
         return x;
     }
@@ -22,16 +32,6 @@ public class Location {
     }
 
     public void setDirection(Direction direction) {
-        this.direction = direction;
-    }
-
-    private int x;
-    private int y;
-    private Direction direction;
-
-    public Location(int x, int y, Direction direction) {
-        this.x = x;
-        this.y = y;
         this.direction = direction;
     }
 }
