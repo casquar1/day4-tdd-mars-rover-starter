@@ -189,7 +189,7 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_change_to_location_negative1_1_N_when_executeCommand_given_0_0_North_and_command_MLMR() {
+    void should_change_to_location_negative1_1_N_when_executeBatchCommands_given_0_0_North_and_commands_MLMR() {
         // Given
         Location initialLocation = new Location(0, 0, Direction.NORTH);
         List<Command> givenCommands = Arrays.asList(Command.MOVE, Command.TURN_LEFT, Command.MOVE, Command.TURN_RIGHT);
